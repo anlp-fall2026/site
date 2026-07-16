@@ -1,10 +1,10 @@
 # Site settings
-course_name: "Large Language Model Applications"
-course_description: "Large Language Model Applications (11-766) is a graduate-level course that aims to teach students how to apply core LLM technology to a wide range of practical, academic, and exploratory applications." 
+course_name: "Advanced Natural Language Processing"
+course_description: "Advanced natural language processing is an introductory graduate-level course on natural language processing aimed at students who are interested in doing cutting-edge research in the field. In it, we describe fundamental tasks in natural language processing such as syntactic, semantic, and discourse analysis, as well as methods to solve these tasks. The course focuses on modern methods using neural networks, and covers the basic modeling and learning algorithms required therefore. The class culminates in a project in which students attempt to reimplement and improve upon a research paper in a topic of their choosing." 
 course_semester: "Spring 2026"
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://cmu-llms.org" # the base hostname & protocol for your site
+url: "http://cmu-anlp.org" # the base hostname & protocol for your site
 
 schoolname: "Carnegie Mellon University"
 schoolurl: "https://www.lti.cs.cmu.edu/"

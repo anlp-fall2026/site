@@ -1,4 +1,4 @@
-# Website for 2024 Iteration of 11-667.
+# Website for 2026 Iteration of 11-766.
 
 This website is based on: https://github.com/kazemnejad/jekyll-course-website-template
 

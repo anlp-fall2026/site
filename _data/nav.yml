@@ -15,14 +15,6 @@ items:
   name: Assignments
   icon_class: fas fa-user-graduate
 
-- url: /project/
-  name: Project
-  icon_class: fas fa-box-open
-
-- url: /scribe/
-  name: Scribe
-  icon_class: fas fa-pen
-
 - url: /materials/
   name: Useful Links
   icon_class: fas fa-book
