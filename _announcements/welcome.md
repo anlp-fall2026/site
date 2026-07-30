@@ -1,4 +1,4 @@
 ---
-date: 2026-02-08
+date: 2026-08-01
 ---
-Project proposal instructions released on Project page.
+Welcome to Advanced NLP! Please read through the syllabus as policies have changed from previous years' offerings.

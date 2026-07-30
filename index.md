@@ -10,8 +10,8 @@ layout: home
 
 ### Office Hours
 
-* **Daphne**: Tuesdays 10 - 10:45 in GHC 6407
-* **Fernando**: Wednesdays 12:00 - 1:00 in GHC 5405
+* **Daphne**: Thursdays 1:00-1:45 PM in GHC 6407
+* **Fernando**: Tuesdays 3:30-4:30 PM in GHC 5405
 * **TAs**: TBD
 
 ## Contacting the Instructors

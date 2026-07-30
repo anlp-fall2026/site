@@ -2,6 +2,7 @@
 layout: syllabus
 title: Syllabus
 permalink: /syllabus/
+mathjax: true
 ---
 
 
@@ -59,21 +60,20 @@ The only acceptable reasons for requesting a makeup exam are:
 2. A conflicting exam from a different class
 3. Attendance at a conference in which you are presenting a paper you authored is an acceptable excuse for missing _only_ the midterm, and _only_ if you tell the instructors at least 30 days before the date of the midterm.
 
-If you miss the midterm for any of the above reasons, your final exam will count for 40\% of your grade.
-If you miss the final exam, you must work with the University Registrar's Office to fdschedule.
+If you miss the midterm for any of the above reasons, your final exam will count for 40% of your grade.
+If you miss the final exam, you must work with the University Registrar's Office to reschedule.
 Note, it is the Registrar's Office, not the instructors of the class, who are responsible for scheduling final exams.
 Any student who misses the final exam without working with the Registrar's Office to schedule a makeup exam will receive a 0% on the final exam, with no exceptions.
 
 
-### Participation
-Your participation grade will be computed as followed. Let $n$ equal the number of participation activities interspersed through the semester, and $x$ be then umber of activities you have participated in.
+**Participation:**
+Your participation grade will be computed as followed. Let _n_ equal the number of participation activities interspersed through the semester, and _x_ be the number of activities you have participated in.
 
-```
-participation_grade = min(x / (0.9 * n), 1)
-```
-In other words, you may miss up to 10\% of participation activities and still get full credit for participation.
+`participation_grade = min(x / (0.9 * n), 1)`
 
-### Peer feedback
+In other words, you may miss up to 10% of participation activities and still get full credit for participation.
+
+**Peer feedback**:
 You will occasionally be asked to provide feedback to your peers on their projects.
 This feedback will be graded generously---we will assign full credit for earnest feedback that was written by you, the student, without the assistance of AI.
 
