@@ -2,19 +2,19 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/assignments/01</loc>
-<lastmod>2026-01-17T00:00:00-05:00</lastmod>
+<lastmod>2026-09-01T00:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assignments/02</loc>
-<lastmod>2026-01-17T00:00:00-05:00</lastmod>
+<lastmod>2026-09-25T00:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assignments/03</loc>
-<lastmod>2026-01-17T00:00:00-05:00</lastmod>
+<lastmod>2026-10-23T00:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assignments/04</loc>
-<lastmod>2026-01-17T00:00:00-05:00</lastmod>
+<lastmod>2026-10-23T00:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assignments/</loc>

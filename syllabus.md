@@ -79,6 +79,7 @@ This feedback will be graded generously---we will assign full credit for earnest
 
 ## Late Policy
 
+Each homework is due at 11:59 PM on its due date.
 For each unexcused day your homework is late, we will subtract 5% from your final grade for the homework.
 For example, if you submit your homework 1 minute late, and your grade would otherwise be a 97%, it will drop down to 92%. If you submit 26 hours late, and your grade would otherwise be 90%, it will drop down to 80%.
 
@@ -99,7 +100,7 @@ We will work with you to ensure that accommodations are provided as appropriate.
 
 ## Policy on Missing Class
 
-If you must miss class, we recommend securing notes from a friend in the class.'
+If you must miss class, we recommend securing notes from a friend in the class.
 We may make video recordings available, but we do not guarantee they will be available for every lecture.
 If you miss class for any reason, you will be counted as not having completed the interactive activities for that class session.
 Note, you may miss up to 10% of interactive activities without any penalty to your grade.
@@ -117,9 +118,10 @@ In your code implementations for the assignments:
 - If you are doing a similar project for a graded class at CMU (including independent studies or directed research), you must declare so on your report, and note which parts of the project are for 11-711, and which parts are for the other class. Consult with the Instructor during office hours or on Piazza if you are unsure.
 
 ### Use of Language Models
-Using a language model to generate any part of a written homework answer  will be considered a violation of academic integrity.
+Using a language model to generate any part of a written homework answer will be considered a violation of academic integrity.
 To reiterate, all written words you turn in for assessment should be written by yourself, without the use of AI (unless you are quoting AI outputs as part of your answer).
 
-You may however use AI to learn more about the subject material of the class, help organize your thoughts, or to help you write code.
+You may however use AI to learn more about the subject material of the class, help organize your thoughts, design figures, or to help you write code.
+However, you, the student, are ultimately responsible for the correctness of all parts of your homework.
 If you do use AI systems to help with the homework, please fill out the "Use of AI" question on the homework to help the instructors understand your usage.
 Use of AI without making an honest attempt at answering this question will be considered a violation of academic integrity.
