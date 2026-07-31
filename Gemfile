@@ -1,29 +1,16 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.4"
-
-# Theme
-gem "minima", "~> 2.5"
-
-# Plugins
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-seo-tag", "~> 2.0"
-  gem "jekyll-sitemap"
-  gem "jekyll-paginate"
-end
-
-gem "webrick" # Required for Ruby 3+/4+ local serving
-gem "csv"     # Required for Ruby 4+
-gem "bigdecimal"
-gem "base64"
+# GitHub Pages gem includes jekyll-feed, jekyll-seo-tag, jekyll-sitemap, etc.
+gem "github-pages", group: :jekyll_plugins
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
 install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
-  gem "tzinfo", "~> 2.0"
+  gem "tzinfo", "~> 1.2"
   gem "tzinfo-data"
 end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
+
+gem "bigdecimal"
