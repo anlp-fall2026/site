@@ -86,7 +86,7 @@ For example, if you submit your homework 1 minute late, and your grade would oth
 You may ask for an excused late day or days at least 168 hours (7 days)  **before** the deadline. 
 Any requests received closer than 168 hours before the deadline will automatically get denied, unless the request is medical (with documentation).
 If your excuse is approved, your grade will not be penalized.
-Valid excuses are medical and personal health issues and other extenuating life circumstances.
+Valid excuses are (a) medical and personal health issues, (b) religious commitments, or (c) other extenuating life circumstances.
 Requests for excused late days may be emailed to f2026-11-711@andrew.cmu.edu.
 
 In the event of a medical emergency, please make your personal health, physical and mental, your first priority. Seek help from medical and care providers such as University Health Services. Students can request medical extensions after the deadline with proof/note from providers. 
