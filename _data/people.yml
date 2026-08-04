@@ -7,12 +7,15 @@ instructors:
     webpage: https://www.daphnei.com/
 
 teaching_assistants:
+  - name: Aashiq Muhamed
+    profile_pic: /_images/pp/aashiq.jpg
+    webpage: https://aashiqmuhamed.github.io/
   - name: Abdul Waheed
     profile_pic: /_images/pp/Smiley.svg
     webpage: http://foobar.com/
   - name: André Duarte
-    profile_pic: /_images/pp/Smiley.svg
-    webpage: http://foobar.com/
+    profile_pic: /_images/pp/andre_duarte.jpg
+    webpage: https://avduarte333.github.io/
   - name: Keyu He
     profile_pic: /_images/pp/Smiley.svg
     webpage: http://foobar.com/
