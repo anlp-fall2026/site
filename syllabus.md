@@ -69,9 +69,9 @@ Any student who misses the final exam without working with the Registrar's Offic
 **Participation:**
 Your participation grade will be computed as followed. Let _n_ equal the number of participation activities interspersed through the semester, and _x_ be the number of activities you have participated in.
 
-`participation_grade = min(x / (0.9 * n), 1)`
+`participation_grade = min(x / (0.8 * n), 1)`
 
-In other words, you may miss up to 10% of participation activities and still get full credit for participation.
+In other words, you may miss up to 20% of participation activities and still get full credit for participation. There will be no other accommodations made for missed participation.
 
 **Peer feedback**:
 You will occasionally be asked to provide feedback to your peers on their projects.
