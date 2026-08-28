@@ -6,7 +6,7 @@ layout: home
 
 ### Class
 * **Location**: BH A51
-* **Time**: Tuesdays and Thursdays 2 AM - 3:20 PM
+* **Time**: Tuesdays and Thursdays 2 PM - 3:20 PM
 
 ### Office Hours
 

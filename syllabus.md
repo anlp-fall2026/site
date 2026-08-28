@@ -10,7 +10,7 @@ mathjax: true
 
 * **Location**: BH A51
 * **Time**: Tuesdays and Thursdays 2 PM - 3:20 PM
-* **Instructor email**: llms-11-766@andrew.cmu.edu
+* **Instructor email**: f2026-11-711@andrew.cmu.edu
 
 ## Course Description
 
