@@ -306,6 +306,12 @@ a.tosu {
         background-color: #c2c2c2;
     }
 
+    .col-0 {
+        padding: 2px;
+        text-align: center;
+        flex-basis: 8%;
+    }
+
     .col-1 {
         padding: 2px;
         flex-basis: 10%;
@@ -314,7 +320,7 @@ a.tosu {
     .col-1-2 {
         text-align: center;
         padding: 2px 10px;
-        flex-basis: 20%;
+        flex-basis: 17%;
     }
 
     .col-2 {
@@ -330,7 +336,7 @@ a.tosu {
     .col-4 {
         padding: 2px;
         padding-left: 20px;
-        flex-basis: 50%;
+        flex-basis: 45%;
 
         ul {
             margin-bottom: 0;
@@ -369,6 +375,13 @@ a.tosu {
             }
         }
 
+        .col-0 {
+            text-align: left;
+            &:empty {
+                display: none;
+            }
+        }
+
         .col-1 {
             display: block;
             padding: 10px 0;
@@ -404,15 +417,23 @@ a.tosu {
 
 .profile-pic-gallary {
     padding: 0px;
-    display: inline;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    h2 {
+        width: 100%;
+        flex-basis: 100%;
+        margin-top: 0;
+    }
 }
 
 .image--cover-container {
     width: 90px;
-    float: left;
     text-align: center;
     margin: 0px;
     margin-right: 40px;
+    margin-bottom: 20px;
 }
 
 .image--cover {
