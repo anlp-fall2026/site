@@ -12,7 +12,7 @@ layout: home
 
 * **Daphne**: Thursdays 1:00-1:45 PM in GHC 6407
 * **Fernando**: Tuesdays 3:45-4:45 PM [by appointment](https://calendar.app.google/CcPwLomRcS3CVfmP7) (scheduling opens one week in advance and closes one hour before; if you need a last minute appointment, please see me after class)
-* **TAs**: TBD
+* **TAs**: Monday 2:00-3:00 PM | Friday 1:00 - 2:00 PM  | **Location: GHC 5417** | [Tentative Schedule](https://docs.google.com/spreadsheets/d/1UU1UndbUT3XVlKwvMuoH-xhstgwODIXDpJICkaRlQ7c/edit?usp=sharing)
 
 ## Contacting the Instructors
 
