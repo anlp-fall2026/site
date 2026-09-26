@@ -29,6 +29,11 @@ exclude: ['develop']
 
 dateformat: "%m/%d/%Y"
 
+# All course times are Pittsburgh time. This makes Jekyll render every `date`
+# filter in ET and read date-only front matter (an exam with no time, say) as
+# midnight ET rather than UTC.
+timezone: America/New_York
+
 future: true
 collections:
     events:
