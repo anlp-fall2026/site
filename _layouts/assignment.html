@@ -11,9 +11,14 @@ title: page.title
 
   <div>
     {% if page.due_event %}
-    <span style="font-weight: bold">Due Date: {{ page.due_event.date | date: "%I:%M %p, %A, %b %d" }}</span>
+    <span style="font-weight: bold">Due Date: {{ page.due_event.date | date: "%I:%M %p, %A, %b %d" }} ET</span>
     {% endif %}
     <p style="font-weight: bold">Download
+      {% if page.downloads %}
+      {% for item in page.downloads %}
+      [<a href="{{ item.url | prepend: site.baseurl }}">{{ item.label }}</a>]
+      {% endfor %}
+      {% else %}
       {% if page.pdf %}
       [<a href="{{ page.pdf | prepend: site.baseurl }}">questions</a>]
       {% endif %}
@@ -22,6 +27,7 @@ title: page.title
       {% endif %}
       {% if page.submission_template %}
       [<a href="{{ page.submission_template | prepend: site.baseurl }}">submission template</a>]
+      {% endif %}
       {% endif %}
     </p>
   </div>

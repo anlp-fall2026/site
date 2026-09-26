@@ -1,0 +1,111 @@
+{% comment %}
+Upcoming-deadlines banner. Sources the same events the schedule page shows:
+every assignment's due_event plus any exam in the lectures collection.
+
+All deadlines are rendered into the page with a data-ts epoch, and the script
+below picks the next `data-count` of them against the *visitor's* clock. That is
+what keeps the banner correct between site builds: on GitHub Pages nothing
+rebuilds until the next push, so a build-time-only choice would go stale.
+Liquid still marks a sensible default so the banner is right without JS.
+{% endcomment %}
+
+{% assign deadline_count = 2 %}
+
+{% assign all_dues = "" | split: "" %}
+{% for assignment in site.assignments %}
+    {% if assignment.due_event %}
+        {% if assignment.due_event[0] %}
+            {% assign all_dues = all_dues | concat: assignment.due_event %}
+        {% else %}
+            {% assign all_dues = all_dues | push: assignment.due_event %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{% assign exams = site.lectures | where: 'type', 'exam' %}
+{% assign deadlines = all_dues | concat: exams | sort: 'date' %}
+
+{% assign now_ts = site.time | date: '%s' | plus: 0 %}
+{% assign upcoming_total = 0 %}
+{% for d in deadlines %}
+    {% if d.time %}{% assign ts = d.date | date: '%s' | plus: 0 %}{% else %}{% assign ts = d.date | date: '%s' | plus: 86399 %}{% endif %}
+    {% if ts >= now_ts %}{% assign upcoming_total = upcoming_total | plus: 1 %}{% endif %}
+{% endfor %}
+
+{% if upcoming_total > 0 %}
+<div class="deadline-banner" id="deadline-banner" data-count="{{ deadline_count }}">
+    <span class="deadline-banner__label">Upcoming</span>
+    <ul class="deadline-banner__list">
+        {% assign shown = 0 %}
+        {% for d in deadlines %}
+            {% if d.time %}{% assign ts = d.date | date: '%s' | plus: 0 %}{% else %}{% assign ts = d.date | date: '%s' | plus: 86399 %}{% endif %}
+            {% if d.description %}{% assign label = d.description %}{% else %}{% assign label = d.title | append: ' exam' %}{% endif %}
+            {% if ts >= now_ts and shown < deadline_count %}
+                {% assign hide = false %}
+                {% assign shown = shown | plus: 1 %}
+            {% else %}
+                {% assign hide = true %}
+            {% endif %}
+        <li class="deadline-item" data-ts="{{ ts }}"{% if hide %} hidden{% endif %}>
+            <span class="deadline-item__name">{{ label }}</span>
+            <span class="deadline-item__when">
+                {{ d.date | date: "%a, %b %-d" }}{% if d.time %}, {{ d.time }} ET{% endif %}
+            </span>
+            <span class="deadline-item__rel"></span>
+        </li>
+        {% endfor %}
+    </ul>
+    <a class="deadline-banner__more" href="{{ '/schedule/' | prepend: site.baseurl }}">Full schedule</a>
+</div>
+
+<script>
+(function () {
+    var box = document.getElementById('deadline-banner');
+    if (!box) return;
+
+    var items = [].slice.call(box.querySelectorAll('.deadline-item'));
+    var count = parseInt(box.getAttribute('data-count'), 10) || 2;
+    var nowSec = Date.now() / 1000;
+
+    // Course times are Pittsburgh time, so "in N days" counts ET calendar days.
+    // Without this a visitor in another zone can be a day off near midnight.
+    var ET = 'America/New_York';
+    function etDayNumber(date) {
+        var parts = new Intl.DateTimeFormat('en-CA', {
+            timeZone: ET, year: 'numeric', month: '2-digit', day: '2-digit'
+        }).format(date);
+        return Math.floor(Date.parse(parts + 'T00:00:00Z') / 86400000);
+    }
+
+    var upcoming = items
+        .filter(function (el) { return parseInt(el.getAttribute('data-ts'), 10) >= nowSec; })
+        .sort(function (a, b) {
+            return a.getAttribute('data-ts') - b.getAttribute('data-ts');
+        })
+        .slice(0, count);
+
+    items.forEach(function (el) { el.hidden = true; });
+
+    var todayET = etDayNumber(new Date());
+
+    upcoming.forEach(function (el) {
+        el.hidden = false;
+        var due = new Date(parseInt(el.getAttribute('data-ts'), 10) * 1000);
+        var days = etDayNumber(due) - todayET;
+        var rel = el.querySelector('.deadline-item__rel');
+        if (days <= 0) {
+            rel.textContent = 'today';
+            rel.className += ' is-urgent';
+        } else if (days === 1) {
+            rel.textContent = 'tomorrow';
+            rel.className += ' is-urgent';
+        } else {
+            rel.textContent = 'in ' + days + ' days';
+            if (days <= 3) rel.className += ' is-urgent';
+        }
+    });
+
+    if (!upcoming.length) box.hidden = true;
+})();
+</script>
+{% endif %}

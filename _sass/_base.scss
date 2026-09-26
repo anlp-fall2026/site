@@ -455,6 +455,136 @@ a.tosu {
     border-color: #faebcc;
 }
 
+.deadline-banner {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-top: 30px;
+    padding: 12px 15px;
+    border: 1px solid #bce8f1;
+    border-left: 4px solid $primary-color;
+    border-radius: 4px;
+    background-color: #f2f9fc;
+}
+
+.deadline-banner__label {
+    font-size: $small-font-size;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: $primary-color;
+}
+
+.deadline-banner__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1 1 auto;
+}
+
+.deadline-banner__more {
+    font-size: $small-font-size;
+    white-space: nowrap;
+}
+
+.deadline-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 10px;
+    padding: 2px 0;
+}
+
+// An explicit `display` beats the UA rule for [hidden], so restore it here:
+// both the banner and its rows are flex containers that we toggle from Liquid
+// and from the script.
+.deadline-banner[hidden],
+.deadline-item[hidden] {
+    display: none;
+}
+
+.deadline-item__name {
+    font-weight: bold;
+}
+
+.deadline-item__when {
+    color: $grey-color-dark;
+    font-size: $small-font-size;
+}
+
+.deadline-item__rel {
+    font-size: $small-font-size;
+    color: $grey-color;
+
+    &.is-urgent {
+        color: $accent-color;
+        font-weight: bold;
+    }
+}
+
+.update-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.update-item {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 3px 0;
+
+    // Recent items read at full strength; older ones recede without hiding.
+    &.is-old {
+        color: $grey-color;
+
+        a {
+            color: $grey-color-dark;
+        }
+    }
+}
+
+.update-date {
+    flex: 0 0 auto;
+    min-width: 3.6em;
+    font-size: $small-font-size;
+    font-variant-numeric: tabular-nums;
+    color: $grey-color;
+    white-space: nowrap;
+}
+
+.update-item.is-new .update-date {
+    color: $grey-color-dark;
+    font-weight: bold;
+}
+
+.update-body {
+    flex: 1 1 auto;
+}
+
+.update-badge {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 0 6px;
+    border-radius: 3px;
+    background-color: $accent-color;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1.6;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    vertical-align: 1px;
+}
+
+@media screen and (max-width: 600px) {
+    .update-item {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+}
+
 .center-cropped {
     width: 100px;
     height: 60px;
