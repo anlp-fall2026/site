@@ -312,7 +312,7 @@ article ul {
 }
 
 article ul > li:before {
-  content: "–"; /* en dash */
+  content: "\2013"; /* en dash */
   position: absolute;
   margin-left: -1.1em; 
 }

@@ -377,6 +377,7 @@ a.tosu {
 
         .col-0 {
             text-align: left;
+
             &:empty {
                 display: none;
             }
@@ -447,12 +448,25 @@ a.tosu {
 }
 
 .announcement-box {
-    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
     margin-bottom: 20px;
-    border: 1px solid transparent;
+    padding: 12px 15px;
+    border: 1px solid #faebcc;
+    border-left: 4px solid #c5a036;
     border-radius: 4px;
     background-color: #fcf8e3;
-    border-color: #faebcc;
+}
+
+.announcement-box h2 {
+    font-size: $small-font-size;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #c5a036;
+    margin: 0;
 }
 
 .deadline-banner {
@@ -505,7 +519,7 @@ a.tosu {
 }
 
 .deadline-item__name {
-    font-weight: bold;
+    font-weight: inherit;
 }
 
 .deadline-item__when {
@@ -519,7 +533,6 @@ a.tosu {
 
     &.is-urgent {
         color: $accent-color;
-        font-weight: bold;
     }
 }
 
@@ -534,15 +547,6 @@ a.tosu {
     align-items: baseline;
     gap: 10px;
     padding: 3px 0;
-
-    // Recent items read at full strength; older ones recede without hiding.
-    &.is-old {
-        color: $grey-color;
-
-        a {
-            color: $grey-color-dark;
-        }
-    }
 }
 
 .update-date {
@@ -550,32 +554,12 @@ a.tosu {
     min-width: 3.6em;
     font-size: $small-font-size;
     font-variant-numeric: tabular-nums;
-    color: $grey-color;
+    color: #000;
     white-space: nowrap;
-}
-
-.update-item.is-new .update-date {
-    color: $grey-color-dark;
-    font-weight: bold;
 }
 
 .update-body {
     flex: 1 1 auto;
-}
-
-.update-badge {
-    display: inline-block;
-    margin-left: 6px;
-    padding: 0 6px;
-    border-radius: 3px;
-    background-color: $accent-color;
-    color: #fff;
-    font-size: 11px;
-    font-weight: bold;
-    line-height: 1.6;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    vertical-align: 1px;
 }
 
 @media screen and (max-width: 600px) {
@@ -635,7 +619,7 @@ a.tosu {
     }
 
     li::before {
-        content: "● ";
+        content: "\25CF  ";
         color: black;
         padding-right: 5px;
     }
