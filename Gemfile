@@ -1,7 +1,23 @@
 source "https://rubygems.org"
 
 # GitHub Pages gem includes jekyll-feed, jekyll-seo-tag, jekyll-sitemap, etc.
-gem "github-pages", group: :jekyll_plugins
+# Note: github-pages gem (v232) has a dependency on commonmarker 0.23 which requires Ruby < 4.0.
+# On Ruby 4+, load jekyll and standard GitHub Pages plugins directly.
+if RUBY_VERSION >= "4.0"
+  gem "jekyll"
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+  gem "jekyll-paginate"
+  gem "jekyll-redirect-from"
+  gem "jekyll-gist"
+  gem "kramdown"
+  gem "kramdown-parser-gfm"
+  gem "webrick"
+  gem "base64"
+else
+  gem "github-pages", group: :jekyll_plugins
+end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
