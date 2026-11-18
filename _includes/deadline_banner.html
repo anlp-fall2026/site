@@ -9,7 +9,7 @@ rebuilds until the next push, so a build-time-only choice would go stale.
 Liquid still marks a sensible default so the banner is right without JS.
 {% endcomment %}
 
-{% assign deadline_count = 2 %}
+{% assign deadline_count = 3 %}
 
 {% assign all_dues = "" | split: "" %}
 {% for assignment in site.assignments %}
@@ -64,7 +64,7 @@ Liquid still marks a sensible default so the banner is right without JS.
     if (!box) return;
 
     var items = [].slice.call(box.querySelectorAll('.deadline-item'));
-    var count = parseInt(box.getAttribute('data-count'), 10) || 2;
+    var count = parseInt(box.getAttribute('data-count'), 10) || 3;
     var nowSec = Date.now() / 1000;
 
     // Course times are Pittsburgh time, so "in N days" counts ET calendar days.
